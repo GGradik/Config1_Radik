@@ -78,7 +78,7 @@ class ShellEmulator:
         if not args:
             print("Windows 11")
         elif args[0] == "-a":
-            print(f"Windows 11 {self.user_name}")
+            print(f"Windows 11 {self.user_name} 5.15.0-1-generic x86_64 GNU/Linux")
         else:
             print("No such flag")
 

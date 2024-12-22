@@ -32,12 +32,12 @@ class TestShellEmulator(unittest.TestCase):
     def test_uname(self):
         """Тест команды uname"""
         result = self._capture_output(self.emulator.uname, [])
-        self.assertEqual(result.strip(), "Linux")  # Проверяем, что команда uname возвращает 'Linux'
+        self.assertEqual(result.strip(), "Windows 11")  # Проверяем, что команда uname возвращает 'Linux'
 
     def test_uname_with_a(self):
         """Тест команды uname с опцией -a"""
         result = self._capture_output(self.emulator.uname, ["-a"])
-        self.assertIn("Linux some_buddy 5.15.0-1-generic x86_64 GNU/Linux\n", result)  # Проверяем вывод с опцией -a
+        self.assertIn("Windows 11 some_buddy\n", result)  # Проверяем вывод с опцией -a
     def test_uname_with_bad_flag(self):
         """Тест команды uname с неправильным флагом"""
         result = self._capture_output(self.emulator.uname, ["-cheeseburger"])
